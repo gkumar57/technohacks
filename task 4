@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class QuizGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int score = 0;
+
+        System.out.println("Welcome to the Quiz Game!");
+        System.out.println("Question 1: What is the capital of France?");
+        System.out.println("A) Paris\nB) London\nC) Berlin\nD) Rome");
+        System.out.print("Your answer (A/B/C/D): ");
+        String answer1 = scanner.nextLine().toUpperCase();
+
+        if (answer1.equals("A")) {
+            System.out.println("Correct!");
+            score++;
+        } else {
+            System.out.println("Wrong! The correct answer is A) Paris.");
+        }
+        System.out.println("Quiz completed! Your score is: " + score + " out of total questions.");
+        scanner.close();
+}
+}
